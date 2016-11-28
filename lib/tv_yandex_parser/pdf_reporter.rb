@@ -19,8 +19,12 @@ module TvYandexParser
         text "<font size='16'><b>#{day.title}</b></font>", inline_format: true
         stroke_horizontal_rule
         move_down 10
-        day.items.each do |item|
-          text "#{item[:time]} #{item[:description]}"
+        if day.available?
+          day.items.each do |item|
+            text "#{item[:time]} #{item[:description]}"
+          end
+        else
+          text day.tv_splash
         end
       end
     end

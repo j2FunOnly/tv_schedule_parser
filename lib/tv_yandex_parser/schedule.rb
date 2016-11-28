@@ -21,7 +21,7 @@ module TvYandexParser
     end
 
     def tv_splash
-      @tv_splash ||= @doc.css('.tv-splash')
+      @tv_splash ||= @doc.css('.tv-splash').text
     end
 
     def available?
