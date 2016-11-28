@@ -6,20 +6,20 @@ require 'tv_yandex_parser/pdf_reporter'
 
 module TvYandexParser
   class Parser
-    def initialize(date, days, channel)
+    def initialize(date = Time.now, days = 1, channel = nil)
       @webclient = WebClient.new do |c|
-        c.channel = channel
+        c.channel = channel if channel
       end
 
-      @schedule = get_schedule date, days
+      get_schedule date, days
     end
 
     def to_pdf(filename)
       TvYandexParser::PDFReporter.new(@schedule).to_file(filename)
     end
 
-    def get_schedule(start_date = Time.now, days = 1)
-      (0...days).map do |day|
+    def get_schedule(start_date, days)
+      @schedule = (0...days).map do |day|
         date = start_date + day * 60 * 60 * 24
         Schedule.new(date.strftime('%d-%m-%Y'), @webclient.fetch(date))
       end

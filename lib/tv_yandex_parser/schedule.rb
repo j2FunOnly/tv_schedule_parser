@@ -28,5 +28,9 @@ module TvYandexParser
       items.size > 0
     end
 
+    def inspect
+      "Schedule for #{title}"
+    end
+
   end
 end
