@@ -21,7 +21,7 @@ module TvYandexParser
     end
 
     def tv_splash
-      @tv_splash ||= @doc.css('.tv-splash').text
+      @tv_splash ||= @doc.css('.b-tv-channel-content__schedule .tv-splash').text
     end
 
     def available?
