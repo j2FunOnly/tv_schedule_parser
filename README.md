@@ -5,12 +5,12 @@ Simple Web Parser. Gets tv schedule from https://tv.yandex.ru and saves to pdf.
 ## Usage
 
 ```ruby
-  require 'tv_schedule_parser'
+require 'tv_schedule_parser'
 
-  parser = TvScheduleParser::Parser.new(
-    Time.now, 7, TvScheduleParser::Channels::HUNT_AND_FISHING
-  )
-  parser.to_pdf('tv_schedule.pdf')
+parser = TvScheduleParser::Parser.new(
+  Time.now, 7, TvScheduleParser::Channels::HUNT_AND_FISHING
+)
+parser.to_pdf('tv_schedule.pdf')
 ```
 
 ## Development
