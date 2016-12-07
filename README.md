@@ -1,6 +1,6 @@
 # TvScheduleParser
 
-Simple Web Parser. Gets tv schedule from https://tv.yandex.ru an saves to pdf.
+Simple Web Parser. Gets tv schedule from https://tv.yandex.ru and saves to pdf.
 
 ## Usage
 
