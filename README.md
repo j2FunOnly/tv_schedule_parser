@@ -1,14 +1,14 @@
-# TvYandexParser
+# TvScheduleParser
 
 Simple Web Parser. Gets tv schedule from https://tv.yandex.ru an saves to pdf.
 
 ## Usage
 
 ```ruby
-  require 'tv_yandex_parser'
+  require 'tv_schedule_parser'
 
-  parser = TvYandexParser::Parser.new(
-    Time.now, 7, TvYandexParser::Channels::HUNT_AND_FISHING
+  parser = TvScheduleParser::Parser.new(
+    Time.now, 7, TvScheduleParser::Channels::HUNT_AND_FISHING
   )
   parser.to_pdf('tv_schedule.pdf')
 ```
@@ -21,11 +21,9 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/j2FunOnly/tv_yandex_parser.
 
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
 
 This gem uses (c) 2009, ParaType Ltd fonts with Original Name: PT Sans.
 

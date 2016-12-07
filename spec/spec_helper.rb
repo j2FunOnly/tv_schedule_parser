@@ -1,2 +1,2 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "tv_yandex_parser"
+require "tv_schedule_parser"

@@ -1,10 +1,10 @@
-require 'tv_yandex_parser/version'
-require 'tv_yandex_parser/channels'
-require 'tv_yandex_parser/schedule'
-require 'tv_yandex_parser/web_client'
-require 'tv_yandex_parser/pdf_reporter'
+require 'tv_schedule_parser/version'
+require 'tv_schedule_parser/channels'
+require 'tv_schedule_parser/schedule'
+require 'tv_schedule_parser/web_client'
+require 'tv_schedule_parser/pdf_reporter'
 
-module TvYandexParser
+module TvScheduleParser
   class Parser
     def initialize(date = Time.now, days = 1, channel = nil)
       @webclient = WebClient.new do |c|
@@ -15,7 +15,7 @@ module TvYandexParser
     end
 
     def to_pdf(filename)
-      TvYandexParser::PDFReporter.new(@schedule).to_file(filename)
+      TvScheduleParser::PDFReporter.new(@schedule).to_file(filename)
     end
 
     def get_schedule(start_date, days)

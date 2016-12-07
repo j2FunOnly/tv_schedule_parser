@@ -1,6 +1,6 @@
 require 'prawn'
 
-module TvYandexParser
+module TvScheduleParser
   class PDFReporter
     include Prawn::View
 

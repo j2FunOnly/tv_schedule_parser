@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-RSpec.describe TvYandexParser::Schedule do
-  let(:webclient) { TvYandexParser::WebClient.new }
+RSpec.describe TvScheduleParser::Schedule do
+  let(:webclient) { TvScheduleParser::WebClient.new }
   subject { described_class.new('Test', webclient.fetch(Time.now)) }
 
   it 'has a title' do

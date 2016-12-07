@@ -1,6 +1,6 @@
 require 'httparty'
 
-module TvYandexParser
+module TvScheduleParser
   class WebClient
     include HTTParty
     follow_redirects false

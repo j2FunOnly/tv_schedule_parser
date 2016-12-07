@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-module TvYandexParser
+module TvScheduleParser
   class Schedule
     def initialize(title, page)
       @title = title

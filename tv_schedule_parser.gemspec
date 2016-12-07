@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'tv_yandex_parser/version'
+require 'tv_schedule_parser/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "tv_yandex_parser"
-  spec.version       = TvYandexParser::VERSION
+  spec.name          = "tv_schedule_parser"
+  spec.version       = TvScheduleParser::VERSION
   spec.authors       = ["j2FunOnly"]
   spec.email         = ["j2funonly@ya.ru"]
 
