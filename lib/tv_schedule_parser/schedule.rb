@@ -12,16 +12,16 @@ module TvScheduleParser
     end
 
     def items
-      @items ||= @doc.css('.b-tv-channel-schedule__item').map do |item|
+      @items ||= @doc.css('.channel-schedule__event').map do |item|
         {
-          time: item.css('.tv-event__time-text').text,
-          description: item.css('.tv-event__title-inner').text
+          time: item.css('.channel-schedule__time').text,
+          description: item.css('.channel-schedule__text').text
         }
       end
     end
 
     def tv_splash
-      @tv_splash ||= @doc.css('.b-tv-channel-content__schedule .tv-splash').text
+      @tv_splash ||= @doc.css('.channel-schedule_empty-splash').text
     end
 
     def available?
